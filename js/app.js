@@ -20,7 +20,12 @@ class UI {
       const value = this.budgetInput.value;
       if (value === '' || value < 0) {
          this.budgetFeedback.classList.add('showItem');
-         this.budgetFeedback.innerHTML = `<p>El valor no puede estar vacio o ser negativo!</p>`;
+         this.budgetFeedback.innerHTML = `<div class="alert alert-danger alert-dismissible fade show" role="alert">
+         El valor no puede estar vacio o ser negativo!
+         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>`;
          const self = this;
          setTimeout(function () {
             self.budgetFeedback.classList.remove('showItem');
@@ -52,7 +57,12 @@ class UI {
       const amountValue = this.amountInput.value;
       if (expenseValue === '' || amountValue === '' || amountValue < 0) {
          this.expenseFeedback.classList.add('showItem');
-         this.expenseFeedback.innerHTML = `<p>El valor no puede estar vacio o ser negativo!</p>`;
+         this.expenseFeedback.innerHTML = `<div class="alert alert-danger alert-dismissible fade show" role="alert">
+         El valor no puede estar vacio o ser negativo!
+         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>`;
          const self = this;
          setTimeout(function () {
             self.expenseFeedback.classList.remove('showItem');
